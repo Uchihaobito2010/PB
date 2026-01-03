@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Pastebin</title>
+</head>
+<body>
+    <h1>Upload Python File</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".py" required><br><br>
+        
+        <label>
+            <input type="checkbox" name="is_private"> Make Private
+        </label><br><br>
+        
+        <div id="password-field" style="display: none;">
+            <input type="password" name="password" placeholder="Set password">
+        </div><br>
+        
+        <button type="submit">Upload</button>
+    </form>
+    
+    <script>
+        document.querySelector('input[name="is_private"]').addEventListener('change', function() {
+            document.getElementById('password-field').style.display = 
+                this.checked ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>
