@@ -1,3 +1,2 @@
-Flask==2.3.3
-Werkzeug==2.3.7
+# Python dependencies for Vercel
 python-multipart==0.0.6
